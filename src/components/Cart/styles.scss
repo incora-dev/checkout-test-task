@@ -1,0 +1,21 @@
+@import '@styles';
+
+.cart {
+  &-container {
+    @include flex(column, space-between, flex-start);
+    overflow-y: auto;
+    height: 100%;
+    background-color: $light;
+  }
+
+  &-empty-container {
+    @include flex(row, center);
+    background-color: $light;
+
+    &-text {
+      @include font(NeueHaasUnicaLight, 20px, 30px);
+      max-width: 230px;
+      text-align: center;
+    }
+  }
+}

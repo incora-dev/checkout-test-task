@@ -1,0 +1,69 @@
+@import '@styles';
+
+.totals-container {
+  width: 100%;
+  margin-top: 41px;
+  margin-bottom: 20px;
+  padding: 0 6px;
+
+  &-item {
+    @include flex(row, space-between, center);
+    margin-bottom: 8px;
+
+    &-title {
+      @include productTitle;
+    }
+
+    &-value {
+      @include fontNeueHaasRegular;
+    }
+  }
+
+  &-total {
+    @include flex(row, space-between, center);
+    padding-top: 10px;
+
+    &-currency {
+      @include font(NeueHaasUnicaRegular, 25px, 25px, $currencyGrey);
+    }
+
+    &-price {
+      @include flex(row, space-between, center);
+    }
+
+    &-title {
+      @include font(NeueHaasUnicaMedium, 25px, 25px);
+      padding-left: 2px;
+    }
+
+    &-value {
+      @include font(NeueHaasUnicaMedium, 25px, 13px);
+      margin-left: 17px;
+    }
+
+    &-title,
+    &-value,
+    &-currency {
+      @media only screen and (max-width: 540px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &-button {
+    @include font(NeueHaasUnicaRegular, 30px, 45px);
+    height: 54px;
+    @include flex(row, center, center);
+    border-radius: 3px;
+    margin-top: 20px;
+    width: calc(100% - 26px);
+    @include arrowButton($mainTextColor, $light, 54);
+
+    @media only screen and (max-width: 540px) {
+      @include arrowButton($mainTextColor, $light, 40);
+      font-size: 18px;
+      line-height: 36px;
+    }
+  }
+}

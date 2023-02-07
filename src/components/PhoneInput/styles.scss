@@ -1,0 +1,27 @@
+@import '@styles';
+
+.phone-input-container {
+  display: flex;
+  width: 100%;
+
+  @include placeholder;
+
+  label::before {
+    left: 140px;
+  }
+
+  input {
+    @include font(NeueHaasUnicaRegular, 25px, 38px, $mainTextColor);
+    width: 100%;
+    line-height: 40px;
+    padding: 0 6px;
+    border: 0;
+    border-bottom: 1px solid $mainTextColor;
+    border-radius: 0;
+    background-color: transparent;
+
+    &:focus + label::before, &:valid + label::before {
+      left: 6px;
+    }
+  }
+}

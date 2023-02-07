@@ -1,0 +1,14 @@
+.checkout-details {
+  &-container {
+    padding-right: 118px;
+    width: 100%;
+
+    @media only screen and (max-width: 1224px) {
+      padding-right: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+}

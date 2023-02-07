@@ -1,0 +1,33 @@
+@import '@styles';
+
+.cart-item-card {
+  display: flex;
+  border-bottom: 0.5px dashed $mainTextColor;
+  padding: 15px 8px 15px 0;
+
+  &-image {
+    @include flex(row, center, center);
+
+    img {
+      width: 100px;
+    }
+  }
+
+  &-info {
+    padding-left: 24px;
+
+    &-title {
+      @include productTitle;
+      letter-spacing: -0.3px;
+    }
+
+    &-price {
+      @include flex(row, space-between, center);
+      margin-top: 14px;
+
+      span {
+        @include fontNeueHaasRegular;
+      }
+    }
+  }
+}

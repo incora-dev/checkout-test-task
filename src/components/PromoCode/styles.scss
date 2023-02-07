@@ -1,0 +1,59 @@
+@import '@styles';
+
+.promo-code-container {
+  margin-top: 24px;
+  text-align: center;
+  padding: 0 5px 0 6px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+
+  &.promo-code-closed {
+    margin-top: 31px;
+    padding: 0 10px 0 7px;
+  }
+
+  .promo-code {
+    &-button {
+      @include font(NeueHaasUnicaMedium, 20px, 40px, $mainTextColor);
+      border: 1px solid $inputBorder;
+      background-color: $tagBg;
+      border-radius: 4px;
+      height: 40px;
+      margin-left: 15px;
+      width: 100%;
+      max-width: 116px;
+    }
+
+    &-content {
+      @include flex;
+    }
+
+    &-text, &-link {
+      @include font(NeueHaasUnicaLight, 18px, 25px);
+      letter-spacing: -0.3px;
+    }
+
+    &-link {
+      text-decoration: underline;
+      color: $linkGrey;
+      margin-left: 5px;
+    }
+  }
+
+  input {
+    @include font(NeueHaasUnicaLight, 18px, 25px, $mainTextColor);
+    border: 1px solid $inputBorder;
+    border-radius: 2px;
+    padding: 6px;
+    height: 40px;
+    max-width: 203px;
+    width: 100%;
+  }
+
+  span {
+    @include font(NeueHaasUnicaLight, 14px, 25px);
+    letter-spacing: 0;
+  }
+}

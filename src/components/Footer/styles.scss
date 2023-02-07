@@ -1,0 +1,27 @@
+@import '@styles';
+
+.footer {
+  &-container {
+    text-align: center;
+    padding: 153px 0 100px;
+
+    @media only screen and (max-width: 1124px) {
+      padding: 50px 0;
+    }
+
+    @media only screen and (max-width: 540px) {
+      padding: 20px 0;
+    }
+  }
+
+  &-title {
+    @include font(NeueHaasUnicaLight, 18px, 24px, $tipText);
+    margin-bottom: 9px;
+  }
+
+  &-secure-icon {
+    &:first-child {
+      margin-right: 29px;
+    }
+  }
+}

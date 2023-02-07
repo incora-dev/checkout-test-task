@@ -1,0 +1,88 @@
+@import '@styles';
+
+.select-container {
+  height: 42px;
+  min-width: 131px;
+  font-size: 25px;
+  background-color: $light;
+
+  .selected-option {
+    position: relative;
+    height: 42px;
+    border: 0.5px solid $selectBorder;
+    border-bottom: 1px solid $mainTextColor;
+    border-radius: 2px;
+    padding: 8px;
+    padding-right: 30px;
+
+    &-placeholder {
+      @include font(NeueHaasUnicaLight, 20px, 10px, $inputText);
+      position: absolute;
+      bottom: 50%;
+      left: 6px;
+      transition: 300ms all;
+      transform: translateY(50%);
+
+      @media only screen and (max-width: 540px) {
+        @include font(NeueHaasUnicaLight, 14px, 8px, $inputText);
+      }
+
+      &.value-selected {
+        bottom: -50%;
+      }
+    }
+
+    img {
+      max-width: 25px;
+      margin-right: 11px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid $mainTextColor;
+      border-right: 1px solid $mainTextColor;
+      transform: rotate(45deg);
+    }
+
+
+    &.open::before {
+      transform: rotate(-135deg);
+      top: 16px;
+    }
+
+    &-value {
+      @include font(NeueHaasUnicaRegular, 25px, 38px, $mainTextColor);
+    }
+  }
+
+  .options {
+    @include font(NeueHaasUnicaRegular, 18px, 24px, $mainTextColor);
+    position: relative;
+    background-color: $light;
+    max-height: 300px;
+    overflow: auto;
+    z-index: 99;
+
+    @media only screen and (max-width: 540px) {
+      @include font(NeueHaasUnicaRegular, 14px, 16px, $mainTextColor);
+    }
+
+    .option {
+      padding: 12px 8px;
+
+      @media only screen and (max-width: 540px) {
+        padding: 5px 8px;
+      }
+
+      img {
+        max-width: 25px;
+        margin-right: 11px;
+      }
+    }
+  }
+}

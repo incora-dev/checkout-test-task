@@ -1,0 +1,30 @@
+@import '@styles';
+
+.tags {
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+
+  .tag-tile {
+    @include font(NeueHaasUnicaLight, 14px, 25px, $mainTextColor);
+    background-color: $tagBg;
+    border-radius: 12px;
+    padding: 4px 7px 0px 9px;
+    @include flex(row, space-between, center);
+    margin-right: 9px;
+    margin-bottom: 4px;
+
+    &-button {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      border: 0;
+      margin-left: 3px;
+
+      img {
+        width: 10px;
+      }
+    }
+  }
+}

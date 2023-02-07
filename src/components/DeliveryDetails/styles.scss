@@ -1,0 +1,45 @@
+@import '@styles';
+
+@include placeholder('textarea');
+
+.form-row-item {
+  width: 100%;
+
+  .delivery-link {
+    @include font(NeueHaasUnicaLight, 20px, 10px, $deliveryLink, underline);
+    border: 0;
+    background-color: transparent;
+    margin-top: 7px;
+    float: right;
+    padding: 0;
+
+    @media only screen and (max-width: 540px) {
+      font-size: 16px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+    width: 100%;
+    padding: 0 6px;
+    border: 0;
+    border-bottom: 1px solid $mainTextColor;
+    border-radius: 0;
+    background-color: transparent;
+    transition: all 2s00ms ease-in-out;
+  }
+}
+
+.delivery-option {
+  @include flex(row, space-between);
+  padding: 10px 0;
+  font-size: 20px;
+
+  .delivery-option {
+    &-value {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}

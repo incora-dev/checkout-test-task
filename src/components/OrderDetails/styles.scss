@@ -1,0 +1,73 @@
+@import '@styles';
+
+.order-details {
+  max-width: 375px;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+    margin-top: 52px;
+  }
+
+  &-title {
+    @include title40;
+  }
+
+  .cart-container {
+    border: 1px solid $cartBorder;
+    border-radius: 9px;
+    padding: 16px 12px;
+    height: auto;
+  }
+
+  &-button {
+    @include arrowButton($mainTextColor, $light, 64);
+    @include font(NeueHaasUnicaRegular, 30px, 45px, $light);
+    width: calc(100% - 26px);
+    margin-top: 23px;
+
+    @media only screen and (max-width: 540px) {
+      @include arrowButton($mainTextColor, $light, 40);
+      font-size: 18px;
+      line-height: 36px;
+    }
+  }
+
+  .cart-info {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    .cart-item-card {
+      padding-left: 4px;
+
+      &-info {
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .totals-container {
+    margin-top: 34px;
+
+    &-total {
+      margin-top: 27px;
+
+      @media only screen and (max-width: 540px) {
+        margin-top: 10px
+      }
+    }
+  }
+
+  .proposal-container {
+    margin-top: 23px;
+
+    .proposal-content-info {
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

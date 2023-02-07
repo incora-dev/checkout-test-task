@@ -1,0 +1,27 @@
+@import '@styles';
+
+.payment-details-container {
+  margin-top: 17px;
+
+  .payment-details {
+    &-title {
+      @include title40;
+    }
+
+    &-content {
+      border: 1px solid $mainTextColor;
+      border-radius: 3px;
+      background-color: $light;
+      margin-top: 12px;
+
+      &-item {
+        background-color: $paymentBg;
+        padding: 0 4px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $mainTextColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import '@styles';
+
+@include placeholder;
+
+.customer-details {
+  margin-bottom: 58px;
+
+  @media only screen and (max-width: 840px) {
+    margin-bottom: 20px
+  }
+
+  &-title {
+    @include title40;
+    letter-spacing: 0;
+
+    @media only screen and (max-width: 1124px) {
+      font-size: 32px;
+    }
+
+    @media only screen and (max-width: 540px) {
+      font-size: 28px;
+      line-height: 44px;
+    }
+  }
+}
+
+.form-container {
+  .form-row {
+    padding-top: 17px;
+
+    @media only screen and (max-width: 840px) {
+      padding-top: 0;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 0 6px;
+    color: $mainTextColor;
+    border: 0;
+    border-bottom: 1px solid $mainTextColor;
+    border-radius: 0;
+    background-color: transparent;
+    transition: all 200ms ease-in-out;
+  }
+
+  .form {
+    &-row {
+      @include flex(row, space-between);
+
+      @media only screen and (max-width: 1124px) {
+        flex-direction: column;
+      }
+
+      &-item {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+
+        @media only screen and (max-width: 540px) {
+          margin-bottom: 12px;
+          padding-bottom: 15px;
+        }
+
+        &.half-width {
+          width: calc(50% - 20px);
+          max-width: 338px;
+
+          @media only screen and (max-width: 1124px) {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        &.form-row-tip {
+          @include font(NeueHaasUnicaLight, 18px);
+          color: $tipText;
+          letter-spacing: 0;
+          max-width: 329px;
+
+          @media only screen and (max-width: 1124px) {
+            max-width: 100%;
+          }
+
+          @media only screen and (max-width: 840px) {
+            padding-bottom: 0;
+          }
+
+          @media only screen and (max-width: 540px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
